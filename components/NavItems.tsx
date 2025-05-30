@@ -26,21 +26,21 @@ const navItems = [
 
 const NavItems = () => {
     const pathname = usePathname();  
-  return (
-    <nav className='flex items-center gap-4'>
-        {navItems.map((item) => (
-            <Link 
-                href={item.href} 
-                key={item.label} 
-                className={cn(
-                    pathname === item.href && 'text-primary font-semibold'
-                )}
-            >
-                {item.label}
-            </Link>
-        ))}
-    </nav>
-  )
+    return (
+        <nav className='flex items-center gap-4'>
+            {navItems.map((item) => (
+                <Link 
+                    href={item.href} 
+                    key={item.label} 
+                    className={cn(
+                        pathname === item.href && 'text-primary font-semibold'
+                    )}
+                >
+                    {item.label}
+                </Link>
+            ))}
+        </nav>
+    )
 }
 
 export default NavItems
