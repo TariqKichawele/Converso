@@ -24,10 +24,15 @@ const navItems = [
     }
 ]
 
-const NavItems = () => {
+interface NavItemsProps {
+  column?: boolean;
+  className?: string;
+}
+
+const NavItems = ({ column = false, className = '' }: NavItemsProps) => {
     const pathname = usePathname();  
     return (
-        <nav className='flex items-center gap-4'>
+        <nav className={`flex ${column ? 'flex-col gap-4' : 'items-center gap-4'} ${className}`}>
             {navItems.map((item) => (
                 <Link 
                     href={item.href} 
