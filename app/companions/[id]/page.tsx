@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import React from 'react'
 import { getSubjectColor } from '@/lib/utils';
+import CompanionComponent from '@/components/CompanionComponent';
 
 
 interface CompanionSessionProps {
@@ -52,9 +53,12 @@ const CompanionSession = async ({ params }: CompanionSessionProps) => {
         </div>
       </article>
 
-      <div>
-        CompanionComponent
-      </div>
+      <CompanionComponent 
+        {...companion}
+        companionId={id}
+        userName={user.firstName!}
+        userImage={user.imageUrl!}
+      />
     </main>
   )
 }
