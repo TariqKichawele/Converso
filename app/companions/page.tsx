@@ -30,8 +30,6 @@ const Companions = async ({ searchParams }: SearchParams) => {
             color={getSubjectColor(companion.subject)}
           />
         ))}
-
-        
       </section>
     </main>
   )
