@@ -107,7 +107,7 @@ const CompanionComponent = ({
             <div className="companion-section">
                 <div className='companion-avatar' style={{ backgroundColor: getSubjectColor(subject)}}>
                     <div className={cn(
-                            'absolute transition-opacity duration-1000', 
+                            'absolute transition-opacity duration-1000 cursor-pointer', 
                             callStatus === CallStatus.FINISHED || callStatus === CallStatus.INACTIVE ? 'opacity-100' : 'opacity-0',
                             callStatus === CallStatus.CONNECTING && 'opacity-100 animate-pulse'
                         )}

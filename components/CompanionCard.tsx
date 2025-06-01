@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 interface CompanionCardProps {
   id: string;
@@ -15,7 +16,11 @@ interface CompanionCardProps {
 
 const CompanionCard = ({ id, name, topic, subject, duration, color }: CompanionCardProps) => {
   return (
-    <article
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.02 }}
       className="companion-card transition-colors duration-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700 shadow-md"
       style={{ backgroundColor: color }}
     >
@@ -34,9 +39,15 @@ const CompanionCard = ({ id, name, topic, subject, duration, color }: CompanionC
         <p className="text-sm">{duration} mins</p>
       </div>
       <Link href={`/companions/${id}`} className="w-full">
-        <button className="btn-primary w-full justify-center">Launch Lesson</button>
+        <motion.button 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="btn-primary w-full justify-center"
+        >
+          Launch Lesson
+        </motion.button>
       </Link>
-    </article>
+    </motion.article>
   )
 }
 

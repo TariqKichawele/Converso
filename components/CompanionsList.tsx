@@ -1,8 +1,11 @@
+'use client'
+
 import React from 'react'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table'
 import { cn, getSubjectColor } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface CompanionsListProps {
     title: string;
@@ -12,7 +15,12 @@ interface CompanionsListProps {
 
 const CompanionsList = ({ title, companions, classNames }: CompanionsListProps) => {
   return (
-    <article className={cn('companion-list', classNames)}>
+    <motion.article 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={cn('companion-list', classNames)}
+    >
         <h2 className='text-3xl font-bold'>{title}</h2>
 
         <Table>
@@ -25,12 +33,19 @@ const CompanionsList = ({ title, companions, classNames }: CompanionsListProps) 
             </TableHeader>
 
             <TableBody>
-                {companions?.map((companion) => (
-                    <TableRow key={companion.id}>
+                {companions?.map((companion, index) => (
+                    <motion.tr
+                        key={companion.id}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                        whileHover={{ scale: 1.01 }}
+                    >
                         <TableCell className='text-lg w-2/3'>
-                            <Link href={`/companions/${companion.id}`}>
+                            <Link href={`/companions/${companion.id}`} className="cursor-pointer">
                                 <div className='flex items-center gap-2'>
-                                    <div 
+                                    <motion.div 
+                                        whileHover={{ scale: 1.05 }}
                                         className='size-[72px] flex items-center justify-center rounded-lg max-md:hidden' 
                                         style={{ backgroundColor: getSubjectColor(companion.subject)}}
                                     >
@@ -40,7 +55,7 @@ const CompanionsList = ({ title, companions, classNames }: CompanionsListProps) 
                                             width={35}
                                             height={35}
                                         />
-                                    </div>
+                                    </motion.div>
 
                                     <div className='flex flex-col gap-2'>
                                         <p className='text-2xl font-bold'>{companion.name}</p>
@@ -51,9 +66,12 @@ const CompanionsList = ({ title, companions, classNames }: CompanionsListProps) 
                         </TableCell>
 
                         <TableCell>
-                            <div className='subject-badge w-fit max-md:hidden'>
+                            <motion.div 
+                                whileHover={{ scale: 1.05 }}
+                                className='subject-badge w-fit max-md:hidden'
+                            >
                                 {companion.subject}
-                            </div>
+                            </motion.div>
                             <div className='flex items-center justify-center rounded-lg w-fit p-2 md:hidden'>
                                 <Image 
                                     src={`/icons/${companion.subject}.svg`}
@@ -79,11 +97,11 @@ const CompanionsList = ({ title, companions, classNames }: CompanionsListProps) 
                                 />
                             </div>
                         </TableCell>
-                    </TableRow>
+                    </motion.tr>
                 ))}
             </TableBody>
         </Table>
-    </article>
+    </motion.article>
   )
 }
 
