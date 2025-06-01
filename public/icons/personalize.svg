@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gear -->
+  <path d="M32 8L36 16L44 12L48 20L56 24L52 32L56 40L48 44L44 52L36 48L32 56L28 48L20 52L16 44L8 40L12 32L8 24L16 20L20 12L28 16L32 8Z" 
+        stroke="#2C2C2C" 
+        stroke-width="2" 
+        fill="none"/>
+  
+  <!-- Center Circle -->
+  <circle cx="32" cy="32" r="8" fill="#FCCC41"/>
+</svg> 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chat Bubble -->
+  <path d="M8 16C8 11.5817 11.5817 8 16 8H48C52.4183 8 56 11.5817 56 16V40C56 44.4183 52.4183 48 48 48H32L16 56L16 48H8V16Z" 
+        stroke="#2C2C2C" 
+        stroke-width="2" 
+        fill="none"/>
+  
+  <!-- Sound Waves -->
+  <path d="M20 24C20 24 24 20 32 20C40 20 44 24 44 24" 
+        stroke="#FCCC41" 
+        stroke-width="2" 
+        fill="none"/>
+  <path d="M20 32C20 32 26 28 32 28C38 28 44 32 44 32" 
+        stroke="#FCCC41" 
+        stroke-width="2" 
+        fill="none"/>
+</svg> 

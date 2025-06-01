@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Graph Background -->
+  <rect x="8" y="8" width="48" height="48" rx="4" stroke="#2C2C2C" stroke-width="2" fill="none"/>
+  
+  <!-- Graph Lines -->
+  <line x1="8" y1="40" x2="56" y2="40" stroke="#2C2C2C" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="8" y1="28" x2="56" y2="28" stroke="#2C2C2C" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="8" y1="16" x2="56" y2="16" stroke="#2C2C2C" stroke-width="2" stroke-dasharray="4 4"/>
+  
+  <!-- Progress Line -->
+  <path d="M8 48L20 40L32 44L44 32L56 24" 
+        stroke="#FCCC41" 
+        stroke-width="3" 
+        fill="none"/>
+  
+  <!-- Data Points -->
+  <circle cx="20" cy="40" r="3" fill="#FCCC41"/>
+  <circle cx="32" cy="44" r="3" fill="#FCCC41"/>
+  <circle cx="44" cy="32" r="3" fill="#FCCC41"/>
+  <circle cx="56" cy="24" r="3" fill="#FCCC41"/>
+</svg> 

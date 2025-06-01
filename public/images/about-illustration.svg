@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="600" rx="40" fill="url(#gradient-bg)" opacity="0.05"/>
+  
+  <!-- Learning Path -->
+  <path d="M100 300 C300 100, 500 500, 700 300 C900 100, 1100 500, 1100 300" 
+        stroke="#2C2C2C" 
+        stroke-width="4" 
+        stroke-dasharray="20 10" 
+        fill="none"/>
+  
+  <!-- Learning Steps -->
+  <g transform="translate(100, 300)">
+    <circle cx="0" cy="0" r="30" fill="#FCCC41"/>
+    <text x="0" y="5" text-anchor="middle" fill="#2C2C2C" font-size="20" font-weight="bold">1</text>
+  </g>
+  
+  <g transform="translate(400, 100)">
+    <circle cx="0" cy="0" r="30" fill="#FCCC41"/>
+    <text x="0" y="5" text-anchor="middle" fill="#2C2C2C" font-size="20" font-weight="bold">2</text>
+  </g>
+  
+  <g transform="translate(700, 300)">
+    <circle cx="0" cy="0" r="30" fill="#FCCC41"/>
+    <text x="0" y="5" text-anchor="middle" fill="#2C2C2C" font-size="20" font-weight="bold">3</text>
+  </g>
+  
+  <g transform="translate(1000, 100)">
+    <circle cx="0" cy="0" r="30" fill="#FCCC41"/>
+    <text x="0" y="5" text-anchor="middle" fill="#2C2C2C" font-size="20" font-weight="bold">4</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g transform="translate(200, 400)">
+    <rect x="0" y="0" width="40" height="40" rx="8" fill="#2C2C2C" opacity="0.1"/>
+    <text x="20" y="25" text-anchor="middle" fill="#2C2C2C" font-size="12">AI</text>
+  </g>
+  
+  <g transform="translate(500, 200)">
+    <rect x="0" y="0" width="40" height="40" rx="8" fill="#2C2C2C" opacity="0.1"/>
+    <text x="20" y="25" text-anchor="middle" fill="#2C2C2C" font-size="12">Learn</text>
+  </g>
+  
+  <g transform="translate(800, 400)">
+    <rect x="0" y="0" width="40" height="40" rx="8" fill="#2C2C2C" opacity="0.1"/>
+    <text x="20" y="25" text-anchor="middle" fill="#2C2C2C" font-size="12">Grow</text>
+  </g>
+  
+  <g transform="translate(1100, 200)">
+    <rect x="0" y="0" width="40" height="40" rx="8" fill="#2C2C2C" opacity="0.1"/>
+    <text x="20" y="25" text-anchor="middle" fill="#2C2C2C" font-size="12">Excel</text>
+  </g>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient-bg" x1="0" y1="0" x2="1200" y2="600">
+      <stop offset="0%" stop-color="#FCCC41"/>
+      <stop offset="100%" stop-color="#2C2C2C"/>
+    </linearGradient>
+  </defs>
+</svg> 
